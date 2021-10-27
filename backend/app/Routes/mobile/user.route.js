@@ -1,4 +1,4 @@
-const { userAuth } = require('../../middlewares/auth');
+const { userAuth } = require('../../UniversalFuntions/jwtAuth');
 const jwtHelper = require('../../UniversalFuntions/jwtAuth');
 
 const express = require('express'),

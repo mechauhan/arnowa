@@ -13,7 +13,6 @@ exports.jwtSign = async (userId) => {
 exports.userAuth = (req, res, next) => {
   try {
     let token = req.headers.accesstoken;
-
     jwt.verify(token, config.JWT_KEY, (err, decode) => {
       if (err) return res.status(401).send({ message: 'Invalid token' });
       req.user = decode;
