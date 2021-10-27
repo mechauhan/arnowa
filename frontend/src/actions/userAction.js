@@ -9,7 +9,7 @@ const register = (name, email, password) => async (dispatch) => {
     const { data } = axios
       .post('http://localhost:5002/user/register', { name, email, password })
       .then((res) => {
-        // localStorage.setItem('accessToken', res.data.data.token);
+        localStorage.setItem('accessToken', res.data.token);
       });
     dispatch({ type: 'USER_REGISTER_SUCCESS', payload: data });
   } catch (error) {

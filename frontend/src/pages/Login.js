@@ -11,7 +11,7 @@ const Login = (props) => {
 
   const dispatch = useDispatch();
 
-  const login = (e) => {
+  const loginfun = (e) => {
     dispatch(login(email, password));
     setemail('');
     setpassword('');
@@ -43,7 +43,7 @@ const Login = (props) => {
                 onChange={(e) => setpassword(e.target.value)}
               />
             </Form.Group>
-            <Button onClick={(e) => login(e)} className="btnStyle mt-3">
+            <Button onClick={(e) => loginfun(e)} className="btnStyle mt-3">
               Log In
             </Button>
           </Form>
